@@ -15,11 +15,11 @@
     font-size: 14px;
 }
 
-.font-md{
+.text-md{
     font-size: 16px;
 }
 
-.font-lg{
+.text-lg{
     font-size: 18px;
 }
 
@@ -33,4 +33,8 @@
 
 .text-3xl{
     font-size: 24px;
+}
+
+.border{
+    border-width: 1px;
 }
