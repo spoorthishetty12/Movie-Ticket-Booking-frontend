@@ -39,10 +39,42 @@ function ProtectedRoute({ children }) {
 
     return (
         user && (
-            <div>
-                {user.name}
-                {children}
+              <div className ="layout p-1">
+            <div className ="header bg-primary flex justify-between p-2">
+                <div>
+                    <h1 className="text-2xl text-white cursor-pointer"
+                    onClick={()=> navigate("/")}>
+                    <i className="ri-movie-2-line p-1"></i>
+                        CINEMAS
+                    </h1>
+                </div>
+                <div className="bg-white p-1 flex gap-1">
+                <i className="ri-user-fill"></i>
+                    <h1 className="text-sm underline"
+                         onClick={()=>{
+                            if(user.roles==="admin"){
+                                navigate('/admin')
+                            }else{
+                                navigate('/profile')
+                            }
+                         }}>
+                         {user.name}
+                        </h1>
+                        <i className="ri-logout-circle-r-line ml-2"
+                        onClick={()=>{
+                            localStorage.removeItem("token");
+                            navigate("/login")
+                        }}></i>
+                </div>
+
             </div>
+            <div className="content mt-1 p-1">
+
+            {children}
+            </div>
+              </div>
+                
+            
         )
     )
 }

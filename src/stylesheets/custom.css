@@ -6,6 +6,35 @@
 .width-400{
     width: 400px    ;
 }
+.content{
+    min-height:85vh;
+    border:1px solid #b1b1b1;
+}
+.underline{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.cursor-pointer {
+ cursor:pointer;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+i{
+    font: size 20px;
+}
+
+table {
+    border: 1px solid #b1b1b1;
+}
+
+thead {
+    background-color: #b1b1b1!important;
+}
+
+thead th{
+    border-bottom: 1px solid #b1b1b1!important;
+}
 
 /* loader */
 
