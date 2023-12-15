@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Admin from './pages/Admin'
 import Register from './pages/Register'
+import Theater from './pages/Theater'
 import './stylesheets/alignments.css'
 import './stylesheets/custom.css'
 import './stylesheets/form-elements.css'
@@ -27,6 +28,7 @@ function App() {
           <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path='/admin' element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+          <Route path='/theater' element={<ProtectedRoute><Theater /></ProtectedRoute>} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>

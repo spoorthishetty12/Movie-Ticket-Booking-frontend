@@ -1,9 +1,9 @@
 import React from'react'
 import PageTitle from '../../components/PageTitle'
 import { Tabs } from 'antd'
-import TheatersList from '../Theater/TheatersList'
+import TheatersList from './TheatersList'
 
-function Profile() {
+function Theater() {
     const items = [
         {
           key: '1',
@@ -13,10 +13,10 @@ function Profile() {
     ]
     return (
       <div>
-        <PageTitle title="Profile" />
+        <PageTitle title="Theater" />
         <Tabs defaultActiveKey="1" items={items}  />    
     </div>
     )
   }
 
-  export default Profile;  
+  export default Theater;  

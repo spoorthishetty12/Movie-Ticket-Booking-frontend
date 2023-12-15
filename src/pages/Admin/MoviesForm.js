@@ -79,6 +79,8 @@ function MoviesForm(props) {
             <Form.Item label="Language" name="language">
               <select name="" id="">
                 <option value="">Select Language</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Tamil">Tamil</option>
                 <option value="Telugu">Telugu</option>
                 <option value="English">English</option>
                 <option value="Hindi">Hindi</option>
@@ -101,6 +103,9 @@ function MoviesForm(props) {
                 <option value="Comedy">Comedy</option>
                 <option value="Drama">Drama</option>
                 <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Horror">Horror</option>
+                <option value="Adventure">Adventure</option>
               </select>
             </Form.Item>
           </Col>

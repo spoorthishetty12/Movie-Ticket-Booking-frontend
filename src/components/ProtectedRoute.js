@@ -54,7 +54,9 @@ function ProtectedRoute({ children }) {
                          onClick={()=>{
                             if(user.roles==="admin"){
                                 navigate('/admin')
-                            }else{
+                            }else if(user.roles === "theater"){
+                                navigate('/theater')
+                            }else {
                                 navigate('/profile')
                             }
                          }}>
