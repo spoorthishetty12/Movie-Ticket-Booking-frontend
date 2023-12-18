@@ -6,6 +6,7 @@ import { DeleteTheater, GetAllTheatersByOwner } from "../../apicalls/theaters"
 import { useDispatch, useSelector } from "react-redux"
 import { HideLoading, ShowLoading } from "../../redux/loadersSlice"
 import { Table, message } from "antd"
+import Shows from "./Shows/index"
 
 function TheatersList(){
     const { user } = useSelector(state => state.users)
@@ -13,6 +14,8 @@ function TheatersList(){
     const [selectedTheater=null, setSelectedTheater] = useState(null)
     const [formType = "add", setFormType] = useState("add")
     const [theaters = [],setTheaters] = useState([])
+
+    const [openShowsModal = false, setOpenShowsModal] = useState(false)
     const dispatch = useDispatch()
 
     const getData = async () => {
@@ -96,7 +99,17 @@ function TheatersList(){
                             setShowTheaterFormModal(true)
                         }}></i>
 
-                        {record.isActive && <span className = "underline">Shows</span>}
+{record.isActive && (
+              <span
+                className="underline"
+                onClick={() => {
+                  setSelectedTheater(record);
+                  setOpenShowsModal(true);
+                }}
+              >
+                Shows
+              </span>
+            )}
                     </div>
                 )
             }
@@ -119,7 +132,8 @@ function TheatersList(){
 
             <Table columns = {columns} dataSource={theaters}/>
 
-        {showTheaterFormModel && <TheatersForm 
+        {showTheaterFormModel && (
+         <TheatersForm 
             showTheaterFormModel = {showTheaterFormModel}
             setShowTheaterFormModal = {setShowTheaterFormModal}
             formType = {formType}
@@ -128,8 +142,16 @@ function TheatersList(){
             setSelectedTheater = {setSelectedTheater} 
             getData = {getData} 
             />  
-    }
-        </div>
+   ) }
+
+   {openShowsModal && (
+        <Shows
+          openShowsModal={openShowsModal}
+          setOpenShowsModal={setOpenShowsModal}
+          theater={selectedTheater}
+        />
+      )} 
+      </div>
 
     )
 }
