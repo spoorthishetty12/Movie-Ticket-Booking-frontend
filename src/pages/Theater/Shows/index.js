@@ -104,7 +104,7 @@ function Shows(props){
         },
         {
             title: "Ticket Price",
-            dataIndex: "ticetPrice"
+            dataIndex: "ticketPrice"
         },
         {
             title: "Total Seats",
@@ -189,7 +189,7 @@ function Shows(props){
                                 rules={[{required: true, message: "Please input show date!"}]}
                             >
                                 <input type="date"
-                                    min = {new Date().toISOString.split("T")[0]}
+                                    min={new Date().toISOString().split("T")[0]}
                                 />
                         </Form.Item>
                       </Col>

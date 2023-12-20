@@ -36,6 +36,37 @@ thead th{
     border-bottom: 1px solid #b1b1b1!important;
 }
 
+.search-input{
+    height: 60px;
+    border-radius: 15px;
+}
+
+.divider{
+    border-bottom: 1px solid #e1e1e1;
+    margin: 10px 0;
+}
+
+/* seats */
+.seat{
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b1b1b1;
+    cursor: pointer;
+}
+
+.selected-seat{
+    background-color: #0cd62d;
+    color:#f5efef;
+}
+
+.booked-seat{
+    background-color: #b1b1b1;
+    color:rgb(61, 60, 60)
+}
+
 /* loader */
 
 .loader-parent{

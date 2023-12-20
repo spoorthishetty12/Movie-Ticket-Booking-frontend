@@ -12,6 +12,8 @@ import './stylesheets/sizes.css'
 import './stylesheets/theme.css'
 import ProtectedRoute from './components/ProtectedRoute'
 import { useSelector } from 'react-redux'
+import TheatersShow from './pages/TheatersShow'
+import BookShow from './pages/BookShow'
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path='/movie/:id' element={<ProtectedRoute><TheatersShow/></ProtectedRoute>} />
+          <Route path='/book-show/:id' element={<ProtectedRoute><BookShow/></ProtectedRoute>} />
           <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path='/admin' element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path='/theater' element={<ProtectedRoute><Theater /></ProtectedRoute>} />

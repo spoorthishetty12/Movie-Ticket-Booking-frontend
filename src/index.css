@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+body{
+    background-color: rgb(245, 237, 228);
+}
+
 *{
     font-family: 'Montserrat', san-serif;
     box-sizing: border-box;

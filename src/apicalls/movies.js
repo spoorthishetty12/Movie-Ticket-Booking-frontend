@@ -40,3 +40,13 @@ export const DeleteMovie = async (payload) => {
         return error.response;
     }
 }
+
+//Get a movie by id
+export const GetMovieById = async (id) => {
+    try{
+        const response = await axiosInstance.get(`/api/movies/get-movie-by-id/${id}`)
+        return response.data
+    }catch(error){
+        return error.response
+    }
+}
