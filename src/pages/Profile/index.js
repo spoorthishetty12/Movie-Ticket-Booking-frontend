@@ -1,11 +1,12 @@
 import React from'react'
 import PageTitle from '../../components/PageTitle'
+import Bookings from './Bookings';
 
 function Profile() {
     return (
       <div>
         <PageTitle title="Profile" />
-        <div>Bookings Information</div> 
+        <Bookings /> 
     </div>
     )
   }
