@@ -36,7 +36,7 @@ function Bookings() {
       <Row gutter={[16, 16]}>
         {bookings.map((booking) => (
           <Col span={12}>
-            <div className="card p-2 flex justify-between uppercase">
+            <div className="card p-2 flex justify-between uppercase mt-2">
               <div>
                 
                 <h1 className="text-xl">

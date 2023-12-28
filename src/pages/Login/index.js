@@ -6,6 +6,7 @@ import { LoginUser } from "../../apicalls/users";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../redux/loadersSlice";
+import '../../stylesheets/sizes.css'
 
 function Register() {
   const navigate = useNavigate();
@@ -36,8 +37,8 @@ function Register() {
 
   return (
     <div className="flex justify-center h-screen items-center bg-primary">
-      <div className="card p-3 w-400">
-        <h1 className="text-xl mb-1">CINEMAS - LOGIN</h1>
+      <div className="card p-3 w-400 br-5">
+        <h1 className="text-xl mb-1"> <i className="ri-movie-2-line"></i> CINEMAS - LOGIN</h1>
         <hr />
         <Form layout="vertical" className="mt-1" onFinish={onFinish}>
           <Form.Item

@@ -123,7 +123,7 @@ function Shows(props){
             render: (text, record)=>{
                 return(
                     <div className = "flex gap-1 items-center">
-                        {record.bookedSeats.lenght === 0 && (
+                        {record.bookedSeats.length === 0 && (
                             <i className="ri-delete-bin-5-fill"
                             onClick={()=>{
                                 handleDelete(record._id)
