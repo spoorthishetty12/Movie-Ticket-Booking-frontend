@@ -47,7 +47,7 @@ function Home() {
         .map((movie) => (
           <Col span={8}>
             <div
-              className="card flex flex-col gap-1 cursor-pointer"
+              className="card flex flex-col gap-1 cursor-pointer mt-3"
               onClick={() =>
                 navigate(
                   `/movie/${movie._id}?date=${moment().format("YYYY-MM-DD")}`
